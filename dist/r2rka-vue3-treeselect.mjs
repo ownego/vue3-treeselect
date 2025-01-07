@@ -2220,7 +2220,13 @@ const Ar = /* @__PURE__ */ H(Mr, [["render", xr]]), Ir = {
           return l.isLoaded = !0, l;
       }
       return i.remoteSearch[n] || (i.remoteSearch[n] = l), i.remoteSearch[n];
-    }, Ot = (n) => i.localSearch.active ? n.isExpandedOnSearch : n.isExpanded, Ue = (n) => !!(n.isMatched || n.isBranch && n.hasMatchedDescendants && !s.flattenSearchResults || !n.isRootNode && n.parentNode.showAllChildrenOnSearch), _t = (n) => !(i.localSearch.active && !Ue(n)), Cn = () => r.value.$el, pe = () => o.value.$el, me = (n, l = !0) => {
+    }, Ot = (n) => i.localSearch.active ? n.isExpandedOnSearch : n.isExpanded, Ue = (n) => !!(n.isMatched || n.isBranch && n.hasMatchedDescendants && !s.flattenSearchResults || !n.isRootNode && n.parentNode.showAllChildrenOnSearch), _t = (n) => !(i.localSearch.active && !Ue(n)), Cn = () => {
+      var n;
+      return (n = r == null ? void 0 : r.value) == null ? void 0 : n.$el;
+    }, pe = () => {
+      var n;
+      return (n = o == null ? void 0 : o.value) == null ? void 0 : n.$el;
+    }, me = (n, l = !0) => {
       const a = i.menu.current;
       if (a != null && a in i.forest.nodeMap && (i.forest.nodeMap[a].isHighlighted = !1), i.menu.current = n.id, n.isHighlighted = !0, i.menu.isOpen && l) {
         const m = () => {

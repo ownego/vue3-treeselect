@@ -1359,10 +1359,10 @@ const shouldShowOptionInMenu = (node) => {
   return true
 };
 const getControl = () => {
-  return control.value.$el
+  return control?.value?.$el;
 };
 const getMenu = () => {
-  return rmenu.value.$el
+  return rmenu?.value?.$el;
 };
 const setCurrentHighlightedOption = (node, scroll = true) => {
   const prev = state.menu.current
