@@ -1377,6 +1377,10 @@ const setCurrentHighlightedOption = (node, scroll = true) => {
     const scrollToOption = () => {
       const $menu = getMenu()
 
+      if (!$menu) {
+        return;
+      }
+
       const $option = $menu.querySelector(`.vue-treeselect__option[data-id="${node.id}"]`)
       if ($option) scrollIntoView($menu, $option)
     }

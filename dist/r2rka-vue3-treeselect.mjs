@@ -2230,7 +2230,10 @@ const Ar = /* @__PURE__ */ H(Mr, [["render", xr]]), Ir = {
       const a = i.menu.current;
       if (a != null && a in i.forest.nodeMap && (i.forest.nodeMap[a].isHighlighted = !1), i.menu.current = n.id, n.isHighlighted = !0, i.menu.isOpen && l) {
         const m = () => {
-          const h = pe(), b = h.querySelector(`.vue-treeselect__option[data-id="${n.id}"]`);
+          const h = pe();
+          if (!h)
+            return;
+          const b = h.querySelector(`.vue-treeselect__option[data-id="${n.id}"]`);
           b && Qn(h, b);
         };
         pe() ? m() : Ie(m);
