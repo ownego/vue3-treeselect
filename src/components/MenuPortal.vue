@@ -33,7 +33,7 @@
     mounted() {
       const { instance } = this
 
-      if (instance.menu.isOpen) this.setupHandlers()
+      if (instance?.menu?.isOpen) this.setupHandlers();
     },
 
     methods: {
